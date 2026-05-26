@@ -1,0 +1,88 @@
+Index: app/src/ForLoop/Palindrome.java
+===================================================================
+diff --git a/app/src/ForLoop/Palindrome.java b/app/src/ForLoop/Palindrome.java
+deleted file mode 100644
+--- a/app/src/ForLoop/Palindrome.java	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
++++ /dev/null	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
+@@ -1,26 +0,0 @@
+-package ForLoop;
+-
+-import java.util.Scanner;
+-
+-public class Palindrome {
+-    public static void main(String[] args)
+-    {
+-        Scanner sc= new Scanner(System.in);
+-        System.out.println("Enter the Number:");
+-        int num=sc.nextInt();
+-        int original=num;
+-        int reverse=0;
+-        for(;num!=0;num/=10)
+-        {
+-            int digit=num%10;
+-            reverse=reverse*10+digit;
+-        }
+-        if(reverse==original)
+-        {
+-            System.out.println("This number "+original+" is Palindrome" );
+-        }
+-        else {
+-            System.out.println("This number "+original+" is not Palindrome" );
+-        }
+-    }
+-}
+\ No newline at end of file
+Index: app/src/ForLoop/SumOfN.java
+===================================================================
+diff --git a/app/src/ForLoop/SumOfN.java b/app/src/ForLoop/SumOfN.java
+deleted file mode 100644
+--- a/app/src/ForLoop/SumOfN.java	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
++++ /dev/null	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
+@@ -1,18 +0,0 @@
+-package ForLoop;
+-
+-import java.util.Scanner;
+-
+-public class SumOfN {
+-    public static void main(String[] args)
+-    {
+-        Scanner sc=new Scanner(System.in);
+-        System.out.println("Enter the number for sum:");
+-        int num= sc.nextInt();
+-        int sum=0;
+-        for(int i=num;i>=0;i--)
+-        {
+-            sum+=i;
+-        }
+-        System.out.println("Sum of" +num+" numbers:"+sum);
+-    }
+-}
+\ No newline at end of file
+Index: app/src/ForLoop/ReverseNum.java
+===================================================================
+diff --git a/app/src/ForLoop/ReverseNum.java b/app/src/ForLoop/ReverseNum.java
+deleted file mode 100644
+--- a/app/src/ForLoop/ReverseNum.java	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
++++ /dev/null	(revision 688010c9c22ed0b9d8ecbf5a53f9e57f695bfe1d)
+@@ -1,20 +0,0 @@
+-package ForLoop;
+-
+-import java.util.Scanner;
+-
+-public class ReverseNum {
+-    public static void main(String[] args)
+-    {
+-        Scanner sc= new Scanner(System.in);
+-        System.out.println("Enter the number for reverse:");
+-        int num= sc.nextInt();
+-        int reverse=0;
+-        for(;num!=0;num/=10)
+-        {
+-            int digit=num%10;
+-            reverse=reverse*10+digit;
+-        }
+-        System.out.println("Reverse Num :"+reverse);
+-        sc.close();
+-    }
+-}
+\ No newline at end of file
