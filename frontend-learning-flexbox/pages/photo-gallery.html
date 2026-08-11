@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Photo Gallery</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body>
+  <header class="page-heading">
+    <h1>Flexbox Photo Gallery</h1>
+    <p>This example uses <code>flex-direction: row</code> to arrange photos in rows.</p>
+    <nav class="utility-nav">
+      <a href="../index.html">← Home</a>
+      <a href="card-layout.html">Cards →</a>
+    </nav>
+  </header>
+
+  <main class="gallery-page">
+    <section class="gallery-example">
+      <div class="gallery-grid">
+        <img src="https://picsum.photos/seed/gallery01/400/260" alt="Gallery landscape 1">
+        <img src="https://picsum.photos/seed/gallery02/400/260" alt="Gallery landscape 2">
+        <img src="https://picsum.photos/seed/gallery03/400/260" alt="Gallery landscape 3">
+        <img src="https://picsum.photos/seed/gallery04/400/260" alt="Gallery landscape 4">
+        <img src="https://picsum.photos/seed/gallery05/400/260" alt="Gallery landscape 5">
+        <img src="https://picsum.photos/seed/gallery06/400/260" alt="Gallery landscape 6">
+        <img src="https://picsum.photos/seed/gallery07/400/260" alt="Gallery landscape 7">
+        <img src="https://picsum.photos/seed/gallery08/400/260" alt="Gallery landscape 8">
+        <img src="https://picsum.photos/seed/gallery09/400/260" alt="Gallery landscape 9">
+      </div>
+
+      <div class="gallery-description">
+        <h2>Flex-direction row</h2>
+        <p>
+          The images are flex items. The container uses
+          <code>display: flex</code>, <code>flex-direction: row</code> and
+          <code>flex-wrap: wrap</code>.
+        </p>
+        <p>Resize the browser window to see the responsive behavior.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="../index.html">Back to Home</a></p>
+  </footer>
+</body>
+</html>

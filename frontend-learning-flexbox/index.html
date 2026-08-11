@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Flexbox Learning</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Frontend Learning Problem</p>
+      <h1>HTML Introduction & Web Page Layout</h1>
+      <p>Practice project using only HTML, CSS and JavaScript.</p>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/website-layout.html">Website Layout</a>
+      <a href="pages/photo-gallery.html">Photo Gallery</a>
+      <a href="pages/card-layout.html">Cards</a>
+      <a href="pages/media-object.html">Media Object</a>
+    </nav>
+  </header>
+
+  <main class="intro-layout">
+    <article class="intro-content">
+      <section>
+        <h2>HTML Introduction</h2>
+        <p>
+          HTML provides the structure of a web page. Semantic elements such as
+          <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>,
+          <code>article</code>, <code>aside</code> and <code>footer</code> make the
+          page easier to understand and maintain.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I am practicing</h2>
+        <ul class="learning-list">
+          <li>HTML document structure</li>
+          <li>Semantic HTML elements</li>
+          <li>CSS Flexbox</li>
+          <li>Responsive layouts</li>
+          <li>Photo gallery layouts</li>
+          <li>Card layouts</li>
+          <li>Media object layouts</li>
+          <li>Basic JavaScript interaction</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Layout examples</h2>
+        <div class="link-grid">
+          <a class="link-card" href="pages/website-layout.html">
+            <strong>Website Layout 1</strong>
+            <span>Header + Article + Aside + Navigation + Footer</span>
+          </a>
+          <a class="link-card" href="pages/photo-gallery.html">
+            <strong>Photo Gallery</strong>
+            <span>Flex-direction row gallery</span>
+          </a>
+          <a class="link-card" href="pages/card-layout.html">
+            <strong>Card Layout</strong>
+            <span>Align-items stretch cards</span>
+          </a>
+          <a class="link-card" href="pages/media-object.html">
+            <strong>Media Object</strong>
+            <span>Image beside flexible content</span>
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <aside class="intro-aside">
+      <h2>Quick Reference</h2>
+      <p><strong>display: flex;</strong></p>
+      <p>Turns an element into a flex container.</p>
+      <p><strong>flex-direction: row;</strong></p>
+      <p>Places flex items horizontally.</p>
+      <p><strong>align-items: stretch;</strong></p>
+      <p>Stretches items across the cross axis when possible.</p>
+      <button id="tipButton" type="button">Show CSS Tip</button>
+      <p id="tipMessage" class="tip-message" hidden></p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Frontend Learning Project • HTML + CSS + JavaScript</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: #075fc7;
+}
+
+code {
+  background: #f1f3f5;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
+
+.site-header {
+  background: #14213d;
+  color: white;
+  padding: 2rem 5%;
+}
+
+.site-header h1,
+.page-heading h1 {
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: white;
+  color: #14213d;
+}
+
+.intro-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+}
+
+.intro-content {
+  flex: 1 1 70%;
+}
+
+.intro-aside {
+  flex: 0 1 300px;
+  align-self: flex-start;
+  padding: 1.5rem;
+  background: #f6f8fa;
+  border: 1px solid #d9dee5;
+  border-radius: 12px;
+}
+
+.learning-list {
+  padding-left: 1.4rem;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.link-card {
+  flex: 1 1 220px;
+  padding: 1rem;
+  border: 1px solid #d9dee5;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.link-card strong,
+.link-card span {
+  display: block;
+}
+
+.link-card span {
+  margin-top: 0.4rem;
+  color: #4b5563;
+}
+
+#tipButton {
+  border: 0;
+  background: #14213d;
+  color: white;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tip-message {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.site-footer {
+  padding: 1.5rem 5%;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.page-heading {
+  padding: 2rem 5% 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.utility-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.utility-nav a {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d7cbbb;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .intro-layout {
+    flex-direction: column;
+  }
+
+  .intro-aside {
+    flex-basis: auto;
+  }
+
+  .utility-nav {
+    flex-direction: column;
+  }
+}
