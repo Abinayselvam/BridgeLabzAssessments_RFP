@@ -1,0 +1,203 @@
+html, body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  background: tomato;
+  color: #fff;
+  padding: 1.2em;
+}
+
+.page-header h1 {
+  margin: 0 0 6px 0;
+}
+
+.card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 1.2em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: tomato;
+}
+
+.anatomy-line {
+  font-family: monospace;
+  font-size: 1.1em;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.tag {
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 2px;
+}
+
+.at-rule { background: #ffe0b2; }
+.media-type { background: #c8e6c9; }
+.operator { background: #bbdefb; }
+.feature { background: #f8bbd0; }
+
+.demo-box {
+  padding: 20px;
+  border-radius: 6px;
+  background: #eee;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ============================================================
+   Example 1: Anatomy demo box
+   default (mobile, < 600px) = grey
+   ============================================================ */
+#anatomyBox {
+  background: #9e9e9e;
+  color: #fff;
+}
+
+/* AT RULE: @media | MEDIA TYPE: screen | OPERATOR: and | FEATURE: min-width */
+@media screen and (min-width: 600px) {
+  #anatomyBox {
+    background: tomato;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #anatomyBox {
+    background: #2e7d32;
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   Example 2: mobile-first card grid
+   ============================================================ */
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mini-card {
+  background: tomato;
+  color: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* AT RULE: @media | MEDIA TYPE: screen | OPERATOR: and | FEATURE: min-width */
+@media screen and (min-width: 700px) {
+  .card-grid {
+    flex-direction: row;
+  }
+
+  .mini-card {
+    flex: 1;
+  }
+}
+
+/* ============================================================
+   Example 3: OR operator - comma separated queries
+   ============================================================ */
+#orBox {
+  background: #eee;
+}
+
+/* AT RULE: @media | comma = OR between two full queries */
+@media (max-width: 500px), (min-width: 1200px) {
+  #orBox {
+    background: #ff9800;
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   Example 4: NOT operator
+   NOT applies to the whole media query it is placed on
+   ============================================================ */
+#notBox {
+  background: #ff9800;
+  color: #fff;
+}
+
+/* AT RULE: @media | OPERATOR: not | applies to screen and (600-900px) */
+@media not screen and (min-width: 600px) and (max-width: 900px) {
+  #notBox {
+    background: #eee;
+    color: #000;
+  }
+}
+
+/* Because "not" negates the whole query above, we flip the
+   default so the box looks highlighted everywhere EXCEPT
+   the 600-900px range: */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #notBox {
+    background: #eee;
+    color: #000;
+  }
+}
+
+@media not screen and (min-width: 600px) and (max-width: 900px) {
+  #notBox {
+    background: #ff9800;
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   Example 5: orientation feature
+   ============================================================ */
+#orientationBox {
+  background: #607d8b;
+  color: #fff;
+}
+
+@media (orientation: landscape) {
+  #orientationBox {
+    background: #3f51b5;
+  }
+  #orientationBox::after {
+    content: " (Landscape)";
+  }
+}
+
+@media (orientation: portrait) {
+  #orientationBox {
+    background: #009688;
+  }
+  #orientationBox::after {
+    content: " (Portrait)";
+  }
+}
+
+/* ============================================================
+   Example 6: print media type
+   ============================================================ */
+.print-only {
+  display: none;
+}
+
+/* AT RULE: @media | MEDIA TYPE: print */
+@media print {
+  .page-header {
+    display: none;
+  }
+  .print-only {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px dashed #000;
+  }
+}

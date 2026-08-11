@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Queries and Responsive Design - Examples</title>
+  <link rel="stylesheet" href="media-queries.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Media Queries &amp; Responsive Design</h1>
+    <p>Resize the browser window (or open dev-tools device toolbar) to see each example react.</p>
+  </header>
+
+  <!-- ============================================================
+       Example 1: Anatomy of a media query
+       @media  screen  and (min-width: 600px)  { ... }
+        AT RULE  TYPE       FEATURE               OPERATOR = and
+       ============================================================ -->
+  <section class="card" id="anatomy">
+    <h2>1. Anatomy of a Media Query</h2>
+    <p class="anatomy-line">
+      <span class="tag at-rule">@media</span>
+      <span class="tag media-type">screen</span>
+      <span class="tag operator">and</span>
+      <span class="tag feature">(min-width: 600px)</span>
+      { <span class="tag">/* CSS rules */</span> }
+    </p>
+    <ul>
+      <li><strong>AT RULE</strong> &ndash; <code>@media</code> starts every media query.</li>
+      <li><strong>MEDIA TYPE</strong> &ndash; <code>screen</code>, <code>print</code>, <code>speech</code>, <code>all</code>...</li>
+      <li><strong>MEDIA FEATURE</strong> &ndash; e.g. <code>min-width</code>, <code>max-width</code>, <code>orientation</code>.</li>
+      <li><strong>OPERATORS</strong> &ndash; <code>and</code>, <code>or</code> (comma separated), <code>not</code>.</li>
+    </ul>
+    <div id="anatomyBox" class="demo-box">This box changes color as the viewport width crosses breakpoints.</div>
+  </section>
+
+  <!-- Example 2: min-width / max-width (mobile-first, using AND) -->
+  <section class="card" id="responsive-cards">
+    <h2>2. min-width / max-width (mobile-first with AND)</h2>
+    <p>These cards stack on narrow screens and move into a row from 700px upward.</p>
+    <div class="card-grid">
+      <div class="mini-card">Card 1</div>
+      <div class="mini-card">Card 2</div>
+      <div class="mini-card">Card 3</div>
+    </div>
+  </section>
+
+  <!-- Example 3: OR operator (comma separated list) -->
+  <section class="card" id="or-example">
+    <h2>3. OR operator (comma-separated queries)</h2>
+    <p>Turns highlighted when the viewport is EITHER narrow (&lt;500px) OR very wide (&gt;1200px).</p>
+    <div id="orBox" class="demo-box">Narrow OR very wide viewport highlight</div>
+  </section>
+
+  <!-- Example 4: NOT operator -->
+  <section class="card" id="not-example">
+    <h2>4. NOT operator</h2>
+    <p>Highlighted for every screen size <em>except</em> the 600px&ndash;900px range.</p>
+    <div id="notBox" class="demo-box">Highlighted unless width is 600px - 900px</div>
+  </section>
+
+  <!-- Example 5: orientation feature -->
+  <section class="card" id="orientation-example">
+    <h2>5. orientation feature</h2>
+    <p>Rotate your device (or resize taller/wider than the window) to see this change.</p>
+    <div id="orientationBox" class="demo-box">Portrait vs Landscape</div>
+  </section>
+
+  <!-- Example 6: print media type -->
+  <section class="card" id="print-example">
+    <h2>6. print media type</h2>
+    <p>Try Ctrl/Cmd+P (print preview): this note appears only in print, and the page header hides.</p>
+    <div class="print-only">This line is only visible in print preview.</div>
+  </section>
+
+</body>
+</html>
