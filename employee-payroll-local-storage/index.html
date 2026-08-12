@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Payroll App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Employee Payroll App</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Employee Payroll Form</h2>
+
+      <form id="employeeForm" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter employee name">
+            <small id="nameError" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="profilePic">Profile Picture</label>
+            <input id="profilePic" name="profilePic" type="file" accept="image/*">
+          </div>
+
+          <div class="field">
+            <label for="gender">Gender</label>
+            <div class="inline-options">
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="department">Department</label>
+            <select id="department" name="department">
+              <option value="">Select Department</option>
+              <option>HR</option>
+              <option>Engineering</option>
+              <option>Finance</option>
+              <option>Sales</option>
+              <option>Marketing</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="salary">Salary: <span id="salaryValue">30000</span></label>
+            <input id="salary" name="salary" type="range" min="10000" max="100000" step="1000" value="30000">
+          </div>
+
+          <div class="field">
+            <label for="startDate">Start Date</label>
+            <input id="startDate" name="startDate" type="date">
+            <small id="dateError" class="error"></small>
+          </div>
+
+          <div class="field full">
+            <label>Benefits</label>
+            <div class="inline-options">
+              <label><input type="checkbox" name="benefits" value="ESIC"> ESIC</label>
+              <label><input type="checkbox" name="benefits" value="PF"> PF</label>
+              <label><input type="checkbox" name="benefits" value="Gratuity"> Gratuity</label>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="notes">Employee Notes</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Enter employee notes"></textarea>
+          </div>
+        </div>
+
+        <div id="formMessage" class="message"></div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Save Employee</button>
+          <button type="reset" class="btn secondary">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Saved Employees</h2>
+        <button id="clearStorage" class="btn danger" type="button">Clear Local Storage</button>
+      </div>
+      <div id="employeeList" class="employee-list"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
