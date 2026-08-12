@@ -1,49 +1,27 @@
-# Employee Payroll App - Local Storage
+# Employee Payroll App - UC 1 to UC 6
 
-A simple HTML5, CSS and JavaScript Employee Payroll application.
+HTML, CSS and JavaScript implementation of the supplied Employee Payroll assessment.
 
-## Assessment coverage
+## UC 1 - Employee Payroll App Home Page
+Home page with Employee Payroll header, employee count, Add Employee button and employee details table.
 
-This project follows the uploaded assessment requirements:
+## UC 2 - Employee Payroll Form with Header and Name
+Add Employee Payroll page with the same header style, name and payroll fields.
 
-- Employee Payroll object with attributes such as department, gender, employee notes and profile picture.
-- Event listeners after document load.
-- Salary range value displayed dynamically.
-- Name and date validation.
-- Employee Payroll object created on Save.
-- Employee data saved to HTML5 Local Storage.
-- Reset button clears the form.
-- Saved employees are displayed from Local Storage.
+## UC 3 - Display Employee Details in Tabular Format
+The JavaScript retrieves the table body using `document.getElementById()` and populates `innerHTML` after `DOMContentLoaded`.
 
-The assessment specifically introduces HTML5 Local Storage and contrasts it with cookies and session storage. Local Storage persists after the browser window is closed and is scoped to the same origin.
+## UC 4 - Display Employee Details using Template Literals
+Uses ES6 template literals with backticks and `${expression}` placeholders to build table rows.
 
-## How to run in VS Code
+## UC 5 - Display Employee Details from JSON Object
+Employee JSON data is displayed with a `for...of` loop. Department values are included and a department filter is generated from the JSON data.
 
-1. Extract/open this folder in VS Code.
-2. Open `index.html`.
-3. Run it using the VS Code Live Server extension, or open `index.html` directly in a browser.
-4. Fill in the form and click **Save Employee**.
-5. Open browser Developer Tools -> Application -> Local Storage to verify the saved JSON.
+## UC 6 - Display Employee Details from Local Storage
+Employee Payroll data is retrieved from Local Storage into `employeePayrollList`, which has file-level scope. The employee count is displayed in the header. The `EmployeePayroll` class uses getters/setters with underscore-prefixed backing properties, so `JSON.stringify()` stores `_name`, `_department`, `_salary`, etc.
 
-## Git commands
+## Run in VS Code
+Open the folder in VS Code and run `index.html` with Live Server. Click Add Employee, save a record, then return to Home. Verify the JSON under browser Developer Tools -> Application -> Local Storage.
 
-```bash
-git init
-git add .
-git commit -m "Add Employee Payroll App with Local Storage"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
-git push -u origin main
-```
-
-## Project structure
-
-```text
-employee-payroll-local-storage/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── app.js
-└── README.md
-```
+## Git
+`git init` -> `git add .` -> `git commit -m "Implement Employee Payroll UC1 to UC6"` -> `git branch -M main` -> `git remote add origin YOUR_GITHUB_REPOSITORY_URL` -> `git push -u origin main`
